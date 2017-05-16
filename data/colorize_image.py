@@ -4,7 +4,7 @@ import scipy as sp
 import cv2
 from pdb import set_trace as st
 # import scipy.misc
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from skimage import color
 import caffe
 from sklearn.cluster import KMeans
@@ -81,7 +81,7 @@ class ColorizeImageBase():
 		self.img_l_set = True
 
 		im = cv2.resize(self.img_rgb_fullres, (self.Xd, self.Xd))
-		self.img_rgb = input_image
+		self.img_rgb = im
 		# convert into lab space
 		self._set_img_lab_()
 		self._set_img_lab_mc_()
